@@ -1,4 +1,4 @@
-// generateModels.ts (Use ts-node or compile and run with node)
+#!/usr/bin/env node
 
 import { createPool, Pool, RowDataPacket } from "mysql2/promise";
 import * as fs from "fs/promises";
@@ -7,7 +7,15 @@ import * as path from "path";
 const PACKAGE_NAME = "orm-dao-simplified";
 
 // --- CONFIGURATION ---
-const OUTPUT_DIR = path.resolve(__dirname, "..", "..", "src", "models");
+const OUTPUT_DIR = path.resolve(
+  __dirname,
+  "..",
+  "..",
+  "..",
+  "..",
+  "src",
+  "models"
+);
 // --- END CONFIGURATION ---
 
 // Map MySQL types to TypeScript types and check for DATE/JSON decorators

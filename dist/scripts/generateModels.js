@@ -1,5 +1,5 @@
+#!/usr/bin/env node
 "use strict";
-// generateModels.ts (Use ts-node or compile and run with node)
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -39,7 +39,7 @@ const fs = __importStar(require("fs/promises"));
 const path = __importStar(require("path"));
 const PACKAGE_NAME = "orm-dao-simplified";
 // --- CONFIGURATION ---
-const OUTPUT_DIR = path.resolve(__dirname, "..", "..", "src", "models");
+const OUTPUT_DIR = path.resolve(__dirname, "..", "..", "..", "..", "src", "models");
 // --- END CONFIGURATION ---
 // Map MySQL types to TypeScript types and check for DATE/JSON decorators
 const typeMap = {

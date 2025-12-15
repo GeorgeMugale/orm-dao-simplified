@@ -13,16 +13,19 @@
     "transactions",
     "validation"
   ],
+  "bin": {
+    "dao-gen": "./dist/scripts/generateModels.js"
+  },
   "license": "MIT",
   "author": "George Mugale",
   "type": "commonjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "build": "tsc",
+    "postbuild": "node postBuild.js",
     "prepublishOnly": "npm test && npm run build",
-    "generate:models": "node ./dist/scripts/generateModels.js"
   },
   "devDependencies": {
     "@types/node": "^25.0.2",
@@ -30,6 +33,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "jest": "^30.2.0",
     "mysql2": "^3.15.3",
     "reflect-metadata": "^0.2.2"
   }
