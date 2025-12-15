@@ -25,7 +25,7 @@
     "test": "jest --passWithNoTests",
     "build": "tsc",
     "postbuild": "node postBuild.js",
-    "prepublishOnly": "npm test && npm run build",
+    "prepublishOnly": "npm test && npm run build"
   },
   "devDependencies": {
     "@types/node": "^25.0.2",
