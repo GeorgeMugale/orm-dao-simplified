@@ -1,6 +1,6 @@
 {
   "name": "orm-dao-simplified",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, TypeScript-first Data Access Object (DAO) library for MySQL, offering type-safe CRUD operations, declarative entity modeling with decorators, robust validation, and native transaction support. Designed to provide ORM-like structure and safety without the complexity and overhead of full-stack ORMs.",
   "keywords": [
     "dao",
