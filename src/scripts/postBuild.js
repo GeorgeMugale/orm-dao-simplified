@@ -2,7 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 // Path relative to the project root where the compiled script lives
-const SCRIPT_PATH = path.join(__dirname, 'dist', 'scripts', 'generateModels.js');
+
+const SCRIPT_PATH = path.join(
+  process.cwd(),
+  "dist",
+  "scripts",
+  "generateModels.js"
+);
 const SHEBANG = '#!/usr/bin/env node\n';
 
 try {

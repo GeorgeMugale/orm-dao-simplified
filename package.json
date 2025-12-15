@@ -24,7 +24,7 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "build": "tsc",
-    "postbuild": "node postBuild.js",
+    "postbuild": "node ./src/scripts/postBuild.js",
     "prepublishOnly": "npm test && npm run build"
   },
   "devDependencies": {
