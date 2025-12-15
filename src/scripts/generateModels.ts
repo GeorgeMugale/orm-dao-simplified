@@ -7,15 +7,7 @@ import * as path from "path";
 const PACKAGE_NAME = "orm-dao-simplified";
 
 // --- CONFIGURATION ---
-const OUTPUT_DIR = path.resolve(
-  __dirname,
-  "..",
-  "..",
-  "..",
-  "..",
-  "src",
-  "models"
-);
+const OUTPUT_DIR = path.resolve(process.cwd(), "src", "models");
 // --- END CONFIGURATION ---
 
 // Map MySQL types to TypeScript types and check for DATE/JSON decorators
