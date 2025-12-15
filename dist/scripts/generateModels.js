@@ -37,8 +37,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const promise_1 = require("mysql2/promise");
 const fs = __importStar(require("fs/promises"));
 const path = __importStar(require("path"));
+const PACKAGE_NAME = "orm-dao-simplified";
 // --- CONFIGURATION ---
-const OUTPUT_DIR = path.resolve(__dirname, '..', '..', 'src', 'models');
+const OUTPUT_DIR = path.resolve(__dirname, "..", "..", "src", "models");
 // --- END CONFIGURATION ---
 // Map MySQL types to TypeScript types and check for DATE/JSON decorators
 const typeMap = {
@@ -143,10 +144,7 @@ async function generateFilesForTable(pool, tableName) {
     }
     interfaceContent += "}\n";
     // --- TEMPLATE FOR ENTITY FILE ---
-    modelContent = `
-import Entity, { IUpdateEntity } from '../Entity.model.js';
-import { Type, EntityPropertyType } from '../type-decorators.js';
-import { EntityValidationError } from '../Utils.js';
+    modelContent = `import { Entity, IUpdateEntity, EntityValidationError, Type, EntityPropertyType } from '${PACKAGE_NAME}';';
 
 ${interfaceContent}
 
@@ -181,7 +179,7 @@ ${propertyDeclarations.join("\n")}
     // --- TEMPLATE FOR DAO FILE ---
     const daoContent = `
 import { Pool, Connection } from 'mysql2/promise';
-import GenericDAO from '../GenericDAO.js';
+import GenericDAO from '${PACKAGE_NAME}';
 import ${className} from './${modelFileName.replace(".ts", "")}';
 
 export default class ${className}DAO extends GenericDAO<${className}> {
