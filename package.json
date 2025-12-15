@@ -1,0 +1,36 @@
+{
+  "name": "orm-dao-simplified",
+  "version": "1.0.0",
+  "description": "A lightweight, TypeScript-first Data Access Object (DAO) library for MySQL, offering type-safe CRUD operations, declarative entity modeling with decorators, robust validation, and native transaction support. Designed to provide ORM-like structure and safety without the complexity and overhead of full-stack ORMs.",
+  "keywords": [
+    "dao",
+    "mysql",
+    "typescript",
+    "entity",
+    "database",
+    "sql",
+    "orm-lite",
+    "transactions",
+    "validation"
+  ],
+  "license": "MIT",
+  "author": "George Mugale",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepublishOnly": "npm test && npm run build",
+    "generate:models": "node ./dist/scripts/generateModels.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "mysql2": "^3.15.3",
+    "reflect-metadata": "^0.2.2"
+  }
+}
