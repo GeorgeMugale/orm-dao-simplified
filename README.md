@@ -146,7 +146,7 @@ Use the provided script to quickly bootstrap your entity and DAO files from an e
 ```bash
 # Run from your project root (after npm run build)
 
-# Usage: node generate:models <host> <user> [password] <database> [port]
+# Usage: npx dao-gen <host> <user> [password] <database> [port]
 
-node generate:models localhost root mypassword mydatabase 
+ npx dao-gen localhost root mypassword mydatabase 
 ```
